@@ -28,7 +28,7 @@ class _ExpensesState extends State<Expenses> {
     return Scaffold(
       body: Column(children: [
         const Text("The chart Expense"),
-        Expanded(child: ExpensesList(expenses: _registeredExpenses))
+        Expanded(child: ExpensesList(expenses: _registeredExpenses, onRemoveEXpense: (Expense expense) {  },))
       ]),
     );
   }
