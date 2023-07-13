@@ -1,5 +1,6 @@
 import 'package:expense_app/expenses.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 var kColorScheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(205, 8, 194, 163),
@@ -10,6 +11,11 @@ var kDarkColorScheme = ColorScheme.fromSeed(
   seedColor: Color.fromARGB(255, 0, 28, 28),
 );
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  // ]).then((value) {
+    
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -25,9 +31,8 @@ void main() {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            foregroundColor: kDarkColorScheme.onPrimaryContainer,
-              backgroundColor: kDarkColorScheme.primaryContainer)
-              ,
+              foregroundColor: kDarkColorScheme.onPrimaryContainer,
+              backgroundColor: kDarkColorScheme.primaryContainer),
         ),
       ),
       theme: ThemeData().copyWith(
@@ -61,4 +66,5 @@ void main() {
       home: const Expenses(),
     ),
   );
+  // });
 }
